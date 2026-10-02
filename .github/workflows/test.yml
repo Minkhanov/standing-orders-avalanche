@@ -1,0 +1,38 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.3
+      - run: forge fmt --check
+      - run: forge build --sizes
+      - run: forge test -vvv
+      - run: ./scripts/typed-data-check.sh
+
+  avalanche-fork:
+    # Read-only checks against Circle's real USDC over the public RPCs (network-dependent, so non-blocking).
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        rpc:
+          - https://api.avax-test.network/ext/bc/C/rpc
+          - https://api.avax.network/ext/bc/C/rpc
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.3
+      - run: forge test --match-contract AvalancheFork --fork-url ${{ matrix.rpc }} -vv

@@ -1,0 +1,18 @@
+# Foundry
+out/
+cache/
+broadcast/*/31337/
+broadcast/**/dry-run/
+
+# Secrets — never commit keys
+.env
+.env.*
+!.env.example
+*.key
+keys/
+
+# Local tooling
+__pycache__/
+node_modules/
+.DS_Store
+deployments-run-*.log

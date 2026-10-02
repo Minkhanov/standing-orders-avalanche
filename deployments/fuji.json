@@ -1,0 +1,9 @@
+{
+  "network": "Avalanche Fuji",
+  "chainId": 43113,
+  "standingOrders": "0x2810b4f331c00f882a30ff5ac664561c9cbf225c",
+  "usdc": "0x5425890298aed601595a70AB815c96711a31Bc65",
+  "deployer": "0xa447dcacA0e29EF0A3306E80dcba89b68f50f701",
+  "deployTx": "0x57f9650eaec658218c55978217d4e98ffea882d9f5496ee40bd7790e1dc57403",
+  "domainSeparator": "0x75a881c9fdf130092c6604f03dd23288967e33f115329614f24c78beeb212704"
+}
