@@ -20,6 +20,7 @@ transaction and pays the gas. Cancelling is gasless too (`Cancel` message).
 | **Status** | Experimental. **Unaudited.** Please use small amounts. |
 | **Token** | Circle's native USDC on C-Chain: mainnet `0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E`, Fuji `0x5425890298aed601595a70AB815c96711a31Bc65` ([Circle's table](https://developers.circle.com/stablecoins/usdc-contract-addresses)) |
 | **Fuji deployment** | [`0x2810b4f331c00f882a30ff5ac664561c9cbf225c`](https://testnet.snowtrace.io/address/0x2810b4f331c00f882a30ff5ac664561c9cbf225c) — gasless demo transactions in [`deployments/fuji-demo.json`](deployments/fuji-demo.json) |
+| **Demo video (56 s)** | [`media/standing-orders-avalanche-60s.mp4`](media/standing-orders-avalanche-60s.mp4) — Fuji deployment, gasless subscribe and cancel, tests |
 | **Avalanche mainnet** | not deployed yet (planned for milestone 1 of the grant application) |
 | **Original (live)** | the same contract family on Arc mainnet, chain 5042: [`0x26b69B3fA2E5d12da11851A80f0c8F66Ff3d0002`](https://explorer.arc.io/address/0x26b69B3fA2E5d12da11851A80f0c8F66Ff3d0002), source verified on Sourcify (exact match) |
 
